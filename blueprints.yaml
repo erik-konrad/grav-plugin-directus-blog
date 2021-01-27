@@ -1,0 +1,52 @@
+name: Directus Blog
+slug: directus-blog
+type: plugin
+version: 0.1.0
+description: Blog generator for GRAV using directus plugin
+icon: plug
+author:
+  name: Erik Konrad
+  email: erik.konrad@zebra.de
+homepage: https://github.com/erik-konrad/grav-plugin-directus-blog
+demo: http://demo.yoursite.com
+keywords: grav, plugin, etc
+bugs: https://github.com/erik-konrad/grav-plugin-directus-blog/issues
+docs: https://github.com/erik-konrad/grav-plugin-directus-blog/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    blog_table:
+      type: text
+      label: Directus table name
+      help: The table name of the blog items
+    blog_entrypoint:
+      type: text
+      label: blog entrypoint
+      help: the entry point in pages for generating folders and markdown files
+    mapping.column_title:
+      type: text
+      label: Title column
+      help: The database column for blog title
+    mapping.column_date:
+      type: text
+      label: Date column
+      help: The database column for blog date
+    mapping.column_category:
+      type: text
+      label: Category column
+      help: The database column for the blog category

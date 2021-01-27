@@ -1,0 +1,15 @@
+enabled: true
+blog_table: directus_blog_table
+blog_entrypoint: user/pages/08.blog
+blog_filename: post.md
+slug_field: zbr_slug
+redirect_route: /nicht-verfuegbar
+additional_params:
+  filter:
+    status:
+      operator: _eq
+      value: published
+mapping:
+  column_title: zbr_title
+  column_date: zbr_date
+  column_category: zbr_category
