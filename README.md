@@ -54,11 +54,17 @@ mapping:
   column_category: zbr_category
 ```
 blog-table - the table with the blogposts
+
 blog_entrypoint - the page path where the blog begins
+
 blog_filename - the name of the generated file. default: post.md
+
 slug_field - the field with the blogpost slug. This is used for the folder name of the blogpost
-redirect_route - this is the redirect route if the blogpost is not found
+
+redirect_route - this is the redirect route if the blogpost is not found. The best way is to use the path to your 404 error site
+
 additional_params - at the moment this is used for defining filters only. for a detailed description and a full param list look at https://docs.directus.io/reference/filter-rules/
+
 mapping - here  is defined which field holds the necessary metadata in the blogpost table
 
 Note that if you use the Admin Plugin, a file with your configuration named directus-blog.yaml will be saved in the `user/config/plugins/`-folder once the configuration is saved in the Admin.
