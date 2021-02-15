@@ -1,6 +1,6 @@
 # Directus Blog Plugin
 
-**This README.md file should be modified to describe the features, installation, configuration, and general usage of the plugin.**
+**This plugin generates blogpost sites from directus headless CMS**
 
 The **Directus Blog** Plugin is an extension for [Grav CMS](http://github.com/getgrav/grav). Blog generator for GRAV using directus plugin
 
