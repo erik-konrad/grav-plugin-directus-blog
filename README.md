@@ -38,19 +38,34 @@ Here is the default configuration and an explanation of available options:
 
 ```yaml
 enabled: true
+blog_table: directus_blog_table
+blog_entrypoint: user/pages/08.blog
+blog_filename: post.md
+slug_field: zbr_slug
+redirect_route: /nicht-verfuegbar
+additional_params:
+  filter:
+    status:
+      operator: _eq
+      value: published
+mapping:
+  column_title: zbr_title
+  column_date: zbr_date
+  column_category: zbr_category
 ```
+blog-table - the table with the blogposts
+blog_entrypoint - the page path where the blog begins
+blog_filename - the name of the generated file. default: post.md
+slug_field - the field with the blogpost slug. This is used for the folder name of the blogpost
+redirect_route - this is the redirect route if the blogpost is not found
+additional_params - at the moment this is used for defining filters only. for a detailed description and a full param list look at https://docs.directus.io/reference/filter-rules/
+mapping - here  is defined which field holds the necessary metadata in the blogpost table
 
 Note that if you use the Admin Plugin, a file with your configuration named directus-blog.yaml will be saved in the `user/config/plugins/`-folder once the configuration is saved in the Admin.
 
 ## Usage
 
-**Describe how to use the plugin.**
+To start synchronising the blog, call the webhook yoursite.com/hook-prefix/refresh-blog
 
-## Credits
-
-**Did you incorporate third-party code? Want to thank somebody?**
-
-## To Do
-
-- [ ] Future plans, if any
+The hook-prefix is defined in the directus plugin configuration.
 
